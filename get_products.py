@@ -143,4 +143,4 @@ for user in reversed(users):
     arr_url = user[3].split('/')[-2]
     item_id = arr_url
     print(get_category_products(item_id, user[2]))
-    break
+

@@ -22,3 +22,7 @@ start scrape product by category
 ```
 python get_products.py
 ```
+
+
+
+in product_det_mir.csv product for https://www.detmir.ru/catalog/index/name/accessories_car_seats/

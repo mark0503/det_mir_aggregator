@@ -55,7 +55,10 @@ def save_products(page, category_id):
         )
         connection.autocommit = True
         cursor = connection.cursor()
-        cursor.execute(insert_query, category)
+        try:
+            cursor.execute(insert_query, category)
+        except Exception:
+            continue
 
 
 def get_category_products(item_id, category_id):
@@ -76,7 +79,7 @@ def get_category_products(item_id, category_id):
     while page_number <= page_count:
         offset += 30
         params = {
-            'filter': f'categories[].alias:metallicheskie_konstruktory;promo:false;withregion:RU-MOW',
+            'filter': f'categories[].alias:{item_id};promo:false;withregion:RU-MOW',
             'expand': 'meta.facet.ages.adults,meta.facet.gender.adults,webp',
             'meta': '*',
             'limit': 30,

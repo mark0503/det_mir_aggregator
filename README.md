@@ -9,7 +9,7 @@ install package
 pip install -r requirements.txt
 
 ```
-*crate .env and add configurate for database
+*create .env and add configurate for database
 
 start scrape category
 
